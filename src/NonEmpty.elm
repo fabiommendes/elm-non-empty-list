@@ -3,11 +3,11 @@ module NonEmpty exposing
     , create, cons, singleton, repeat, range, generate, fromList, withDefault, withExample
     , map, indexedMap, foldl, foldr, reduce
     , filter, filterMap
-    , append, concat, concatMap, map2, map3, map4, map5
+    , append, concat, concatMap, intersperse, map2, map3, map4, map5
     , sort, sortBy, sortWith
     , isEmpty, head, tail, take, drop, partition, uncons, unzip
     , length, all, any, minimum, maximum, sum, product, member, reverse, toList
-    , getAt, insertAt, removeAt, updateAt, intersperse
+    , getAt, insertAt, removeAt, updateAt
     )
 
 {-| A list with at least one element
@@ -62,17 +62,10 @@ module NonEmpty exposing
 import List.Extra as List
 
 
-{-| A list of a\`s with at least 2 elements.
-
-Meta information can be associated to each segment pair.
-
+{-| A list of a\`s with at least 1 element.
 -}
 type NonEmpty a
     = NonEmpty a (List a)
-
-
-
---- Create
 
 
 {-| Create a list with only one element
